@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  //font
+  --font-family: Vollkorn;
+  --regular: 400;
+  --semibold: 600;
+  --bold: 800;
+
+  //color
+  --primary: #c5aa6f;
+  --dark: #313346;
+  --light: #efe6d2;
+
+  //sizes
+  --x-small: 4px;
+  --small: 8px;
+  --medium: 16px;
+  --large: 24px;
+  --x-large: 32px;
+}
+
+*,
+button {
+  font-family: var(--font-family);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
