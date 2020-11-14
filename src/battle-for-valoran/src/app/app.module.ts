@@ -11,6 +11,7 @@ import { Container } from './components/container/container.component'
 import { Paragraphy } from './components/paragraphy/paragraphy.component'
 import { Divisor } from './components/divisor/divisor.component'
 import { TeamManager } from './pages/team-manager/team-manager.component'
+import { TeamForm } from './components/team-form/team-form.component'
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { TeamManager } from './pages/team-manager/team-manager.component'
     Paragraphy,
     Divisor,
     TeamManager,
+    TeamForm,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

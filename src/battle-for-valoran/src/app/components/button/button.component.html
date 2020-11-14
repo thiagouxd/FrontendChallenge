@@ -1,9 +1,4 @@
-<button
-  *ngIf="!routerLink"
-  (click)="callbackFunction()"
-  class="button {{ size }} {{ type }}"
-  [disabled]="disabled"
->
+<button *ngIf="!routerLink" class="button {{ size }} {{ type }}" [disabled]="disabled">
   {{ text }}
 </button>
 

@@ -1,14 +1,16 @@
 <div class="team-manager">
   <lol-container>
-    <lol-title size="medium">GERENCIAMENTO DOS TIMES</lol-title>
+    <lol-title size="medium"> GERENCIAMENTO DOS TIMES </lol-title>
 
-    <div class="team-manager__content"></div>
+    <div class="team-manager__content">
+      <lol-team-form *ngFor="let team of teams" [team]="team"></lol-team-form>
+    </div>
 
     <lol-divisor></lol-divisor>
 
     <footer class="team-manager__footer">
-      <lol-button routerLink="/info-team-manager">Retornar</lol-button>
-      <lol-button routerLink="/battle">Iniciar Batalha</lol-button>
+      <lol-button routerLink="/info-team-manager"> Retornar </lol-button>
+      <lol-button (click)="startBattle()" text="Iniciar Batalha"> </lol-button>
     </footer>
   </lol-container>
 </div>

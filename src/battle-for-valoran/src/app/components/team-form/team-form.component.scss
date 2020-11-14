@@ -1,0 +1,24 @@
+.title {
+  color: var(--light);
+  font-weight: var(--regular);
+  margin-top: var(--large);
+  margin-bottom: var(--small);
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.text-validate {
+  margin-top: var(--small);
+  color: var(--alert);
+}
+
+.input {
+  display: flex;
+  height: var(--xx-large);
+  color: var(--light);
+  background-color: var(--black);
+  padding: var(--x-small) var(--medium);
+  border-radius: var(--small);
+  border: 1px solid var(--primary);
+}

@@ -1,11 +1,6 @@
 .map-bg {
-  width: 100vw;
   height: 100vh;
-  padding: 0 var(--large);
-  padding-top: 188px;
-  background: url(../assets/bg.jpg) no-repeat;
-  background-size: cover;
-  background-position-x: 0%;
+  padding: calc(var(--medium) * 10) var(--large);
   display: flex;
   justify-content: center;
 }
