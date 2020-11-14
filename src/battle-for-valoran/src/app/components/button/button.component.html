@@ -1,3 +1,7 @@
-<button (click)="callbackFunction()" class="button {{size}}" [disabled]="disabled">
+<button *ngIf="!routerLink" (click)="callbackFunction()" class="button {{size}}" [disabled]="disabled">
   <ng-content></ng-content>
 </button>
+
+<a [routerLink]="routerLink" class="button {{size}}" *ngIf="routerLink">
+  <ng-content></ng-content>
+</a>

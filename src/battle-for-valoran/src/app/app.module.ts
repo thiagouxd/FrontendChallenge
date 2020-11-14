@@ -6,9 +6,21 @@ import { Button } from './components/button/button.component';
 import { Input } from './components/input/input.component';
 import { Title } from './components/title/title.component';
 import { Home } from './pages/home/home.component';
+import { TeamManager } from './pages/team-manager/team-manager.component';
+import { Container } from './components/container/container.component';
+import { Paragraphy } from './components/paragraphy/paragraphy.component';
 
 @NgModule({
-  declarations: [AppComponent, Button, Input, Title, Home],
+  declarations: [
+    AppComponent,
+    Button,
+    Input,
+    Title,
+    Home,
+    TeamManager,
+    Container,
+    Paragraphy,
+  ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],

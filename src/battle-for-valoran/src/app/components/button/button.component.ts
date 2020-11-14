@@ -9,6 +9,7 @@ export class Button implements OnInit {
   @Input() size: string;
   @Input() disabled: boolean = false;
   @Input() callbackFunction: () => void;
+  @Input() routerLink: string;
 
   ngOnInit() {
     this.size = this.size ? `button_${this.size}` : '';

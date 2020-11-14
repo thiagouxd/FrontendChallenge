@@ -1,12 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'lol-title',
   templateUrl: './title.component.html',
   styleUrls: ['./title.component.scss'],
 })
-export class Title implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
+export class Title {
+  @Input() size: boolean = true;
 }
