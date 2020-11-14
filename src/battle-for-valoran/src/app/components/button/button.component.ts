@@ -1,11 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-button',
+  selector: 'lol-button',
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss'],
 })
-export class ButtonComponent implements OnInit {
+export class Button implements OnInit {
   @Input() size: string;
   @Input() disabled: boolean = false;
   @Input() callbackFunction: () => void;

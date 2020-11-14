@@ -9,10 +9,6 @@ import * as Feather from 'feather-icons';
 export class AppComponent implements AfterViewInit {
   title = 'battle-for-valoran';
 
-  alertNow = (args: any): void => {
-    alert('desceu');
-  };
-
   ngAfterViewInit() {
     Feather.replace();
   }

@@ -6,14 +6,33 @@
   padding: var(--small) var(--medium);
   padding-bottom: calc(var(--small) - 2px);
   color: var(--light);
+  border-width: 2px;
   background-color: var(--dark);
   border-image-source: linear-gradient(180deg, #f2cb73, #9b7a2f);
   border-image-slice: 1;
   cursor: pointer;
   outline: 0;
+  &:hover,
+  &:focus {
+    background-color: var(--dark-hover);
+    color: var(--light-hover);
+  }
+  &:active {
+    transform: translate(0, -2px);
+  }
 }
 
 .button_large {
   padding: var(--medium) var(--large);
   border-width: 3px;
+}
+
+.button_small {
+  padding: var(--x-small) var(--small);
+  border-width: 1px;
+}
+
+.button_medium {
+  padding: var(--small) var(--medium);
+  border-width: 2px;
 }

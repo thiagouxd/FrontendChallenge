@@ -1,6 +1,6 @@
 :root {
   //font
-  --font-family: Vollkorn;
+  --font-family: Vollkorn, serif;
   --regular: 400;
   --semibold: 600;
   --bold: 800;
@@ -8,7 +8,9 @@
   //color
   --primary: #c5aa6f;
   --dark: #313346;
+  --dark-hover: #181a2c;
   --light: #efe6d2;
+  --light-hover: #efe6d2;
 
   //sizes
   --x-small: 4px;
