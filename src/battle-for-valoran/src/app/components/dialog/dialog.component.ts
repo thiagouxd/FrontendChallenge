@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core'
+import { Component, Input, OnInit } from '@angular/core'
 
 let open = false
 let lastElement: any
@@ -10,14 +10,13 @@ let allElements: any
   templateUrl: './dialog.component.html',
   styleUrls: ['./dialog.component.scss'],
 })
-export class Dialog {
+export class Dialog implements OnInit {
   @Input() size: string
   @Input() dialogId: string
   @Input() title: string
   @Input() subtitle: string
 
   show(id: string) {
-    debugger
     lastElement = document.activeElement
     idOpened = id
     open = true
@@ -74,8 +73,8 @@ export class Dialog {
     }
   }
 
-  verifySize() {
-    this.size ? `dialog_${this.size}` : ''
+  ngOnInit() {
+    this.size = this.size ? `dialog_${this.size}` : ''
   }
 
   preventClick(event: any) {

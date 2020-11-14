@@ -23,8 +23,4 @@ export class TeamManager implements OnInit {
     this.titleService.setTitle('Gerenciamento de times')
     this.teams = this.teamsService.getTeams()
   }
-
-  chooseRegion() {
-    this.dialog.show('region')
-  }
 }
