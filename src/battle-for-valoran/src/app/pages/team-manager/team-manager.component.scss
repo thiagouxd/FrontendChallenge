@@ -1,10 +1,18 @@
+.team-manager {
+  width: 100%;
+}
+
 .team-manager__button-return {
   position: fixed;
   top: 24px;
   left: 24px;
 }
 
-footer {
+.team-manager__content {
+  max-width: 520px;
+}
+
+.team-manager__footer {
   width: 100%;
   display: flex;
   justify-content: flex-end;

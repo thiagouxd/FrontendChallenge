@@ -7,13 +7,14 @@ import { Component, Input, OnInit } from '@angular/core'
 })
 export class Button implements OnInit {
   @Input() size: string
+  @Input() type: string
   @Input() text: string
   @Input() disabled: boolean = false
-  @Input() type: string
   @Input() callbackFunction: () => void
   @Input() routerLink: string
 
   ngOnInit() {
     this.size = this.size ? `button_${this.size}` : ''
+    this.type = this.type ? `button_${this.type}` : ''
   }
 }
