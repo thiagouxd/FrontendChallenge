@@ -1,0 +1,57 @@
+.regions {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 calc(var(--small) * -1);
+}
+
+.region {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--medium);
+  margin: var(--small);
+  font-size: var(--medium);
+  border-radius: var(--medium);
+  color: var(--light);
+  min-width: 120px;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  img {
+    height: 72px;
+    width: 63px;
+    margin-bottom: var(--medium);
+  }
+
+  input {
+    display: none;
+  }
+
+  input ~ .region__container {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    border-radius: var(--medium);
+    z-index: -1;
+  }
+
+  input:checked ~ .region__container {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 2px solid var(--primary);
+  }
+
+  input:disabled ~ .region__container {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 0;
+  }
+
+  input:disabled ~ img {
+    opacity: 0.3;
+  }
+}

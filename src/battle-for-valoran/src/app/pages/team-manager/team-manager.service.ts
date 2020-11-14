@@ -5,23 +5,17 @@ import { Injectable } from '@angular/core'
 })
 export class TeamsService {
   teams: any = [
-    { id: 1, name: 'Thiago', image: '' },
-    { id: 2, name: '', image: '' },
-    { id: 3, name: '', image: '' },
-    { id: 4, name: '', image: '' },
-    { id: 5, name: '', image: '' },
-    { id: 6, name: '', image: '' },
-    { id: 7, name: '', image: '' },
-    { id: 8, name: '', image: '' },
+    { id: 1, name: '', region: {} },
+    { id: 2, name: '', region: {} },
+    { id: 3, name: '', region: {} },
+    { id: 4, name: '', region: {} },
+    { id: 5, name: '', region: {} },
+    { id: 6, name: '', region: {} },
+    { id: 7, name: '', region: {} },
+    { id: 8, name: '', region: {} },
   ]
 
-  saveLocalStorage() {
-    localStorage.setItem('teams', JSON.stringify(this.teams))
-  }
-
   getTeams() {
-    this.saveLocalStorage()
-    const teams = localStorage.getItem('teams')
-    return JSON.parse(teams)
+    return this.teams
   }
 }

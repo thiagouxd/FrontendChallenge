@@ -15,9 +15,12 @@
   </lol-container>
 </div>
 
-<lol-dialog size="medium" dialogId="region" title="Selecionar Nação">
-  <content>
+<lol-dialog size="medium" dialogId="region" title="Selecionar Região">
+  <dialog-content>
     <lol-region></lol-region>
-  </content>
-  <footer>Teste</footer>
+  </dialog-content>
+
+  <dialog-footer>
+    <lol-button (click)="finish()" text="Escolher região"></lol-button>
+  </dialog-footer>
 </lol-dialog>

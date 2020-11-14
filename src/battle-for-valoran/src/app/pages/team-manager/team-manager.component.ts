@@ -13,6 +13,7 @@ export class TeamManager implements OnInit {
   constructor(private titleService: Title, private teamsService: TeamsService) {}
 
   @Input() teams: any
+  @Input() teamSelected: any
 
   startBattle(): void {
     localStorage.setItem('teams', JSON.stringify(this.teams))
@@ -22,5 +23,9 @@ export class TeamManager implements OnInit {
   ngOnInit() {
     this.titleService.setTitle('Gerenciamento de times')
     this.teams = this.teamsService.getTeams()
+  }
+
+  finish() {
+    alert(this.teamSelected)
   }
 }

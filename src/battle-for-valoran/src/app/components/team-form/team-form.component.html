@@ -4,13 +4,17 @@
   class="input"
   (change)="changeNameTeam(team, $event)"
   name="name"
-  [value]="team.name"
   required
+  autocomplete="off"
 />
-<p class="text-validate">É obrigatório inserir um nome {{ team.index }}</p>
+<p *ngIf="!team.name" class="text-validate">É obrigatório inserir um nome {{ team.index }}</p>
 
-<h3 class="title">Nação:</h3>
-<lol-button (click)="chooseRegion()" text="Escolher ou alterar Nação"></lol-button>
-<p class="text-validate">É obrigatório escolher uma nação {{ team.id }}</p>
+<h3 class="title">Região:</h3>
+
+<lol-button text="Escolher ou alterar Região"></lol-button>
+
+<p *ngIf="!team.region.length" class="text-validate">
+  É obrigatório escolher uma região {{ team.id }}
+</p>
 
 <lol-divisor dark="true"></lol-divisor>

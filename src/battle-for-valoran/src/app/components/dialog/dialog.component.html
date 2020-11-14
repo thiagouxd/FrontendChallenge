@@ -6,11 +6,11 @@
     </header>
 
     <div class="dialog__content">
-      <ng-content select="content"></ng-content>
+      <ng-content select="slot='content'"></ng-content>
     </div>
 
     <footer class="dialog__footer">
-      <ng-content select="footer"></ng-content>
+      <ng-content select="slot='footer'"></ng-content>
     </footer>
 
     <button class="dialog__buttonClose" type="button" (click)="close()" aria-label="Fechar diálogo">

@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core'
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { Button } from './components/button/button.component'
-import { Input } from './components/input/input.component'
 import { Title } from './components/title/title.component'
 import { Home } from './pages/home/home.component'
 import { InfoTeamManager } from './pages/info-team-manager/info-team-manager.component'
@@ -19,7 +18,6 @@ import { Region } from './components/region/region.component'
   declarations: [
     AppComponent,
     Button,
-    Input,
     Title,
     Home,
     InfoTeamManager,
@@ -34,5 +32,6 @@ import { Region } from './components/region/region.component'
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
+  schemas: [NO_ERRORS_SCHEMA],
 })
 export class AppModule {}

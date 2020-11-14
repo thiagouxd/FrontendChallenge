@@ -1,1 +1,8 @@
-<div class="region">Eu to ficano loko</div>
+<div class="regions">
+  <label *ngFor="let region of regions" class="region">
+    <input name="radioRegion" type="radio" (change)="choose(region)" />
+    <img [src]="region.image" alt="" />
+    {{ region.name }}
+    <span class="region__container"></span>
+  </label>
+</div>
