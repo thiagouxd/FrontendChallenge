@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit, Input } from '@angular/core'
 import { Title } from '@angular/platform-browser'
 import { TeamsService } from './team-manager.service'
 
@@ -10,13 +10,11 @@ import { TeamsService } from './team-manager.service'
 export class TeamManager implements OnInit {
   constructor(private titleService: Title, private teamsService: TeamsService) {}
 
-  teams: any
-  teamsLocal: any
+  @Input() teams: any
 
   startBattle(): void {
-    this.teamsLocal = this.teams
-    localStorage.setItem('teams', JSON.stringify(this.teamsLocal))
-    console.log(this.teamsLocal)
+    localStorage.setItem('teams', JSON.stringify(this.teams))
+    console.log(this.teams)
   }
 
   ngOnInit() {

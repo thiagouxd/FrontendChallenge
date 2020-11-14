@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core'
 })
 export class TeamsService {
   teams: any = [
-    { id: 1, name: '', image: '' },
+    { id: 1, name: 'Thiago', image: '' },
     { id: 2, name: '', image: '' },
     { id: 3, name: '', image: '' },
     { id: 4, name: '', image: '' },

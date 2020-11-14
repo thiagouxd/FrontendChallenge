@@ -8,9 +8,7 @@ import { Component, Input } from '@angular/core'
 export class TeamForm {
   @Input() team: any
 
-  teamName: string = 'teste'
-
-  includeName(event) {
-    console.log(event.target.value)
+  changeNameTeam(team: any, event): void {
+    team.name = event.target.value
   }
 }
