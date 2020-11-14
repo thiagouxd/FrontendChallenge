@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core'
 import { Title } from '@angular/platform-browser'
+import { Dialog } from 'src/app/components/dialog/dialog.component'
 import { TeamsService } from './team-manager.service'
 
 @Component({
@@ -8,6 +9,7 @@ import { TeamsService } from './team-manager.service'
   styleUrls: ['./team-manager.component.scss'],
 })
 export class TeamManager implements OnInit {
+  dialog: any = new Dialog()
   constructor(private titleService: Title, private teamsService: TeamsService) {}
 
   @Input() teams: any
@@ -20,5 +22,9 @@ export class TeamManager implements OnInit {
   ngOnInit() {
     this.titleService.setTitle('Gerenciamento de times')
     this.teams = this.teamsService.getTeams()
+  }
+
+  chooseRegion() {
+    this.dialog.show('region')
   }
 }
