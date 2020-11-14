@@ -1,14 +1,15 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { Button } from './components/button/button.component';
-import { Input } from './components/input/input.component';
-import { Title } from './components/title/title.component';
-import { Home } from './pages/home/home.component';
-import { TeamManager } from './pages/team-manager/team-manager.component';
-import { Container } from './components/container/container.component';
-import { Paragraphy } from './components/paragraphy/paragraphy.component';
+import { BrowserModule } from '@angular/platform-browser'
+import { NgModule } from '@angular/core'
+import { AppRoutingModule } from './app-routing.module'
+import { AppComponent } from './app.component'
+import { Button } from './components/button/button.component'
+import { Input } from './components/input/input.component'
+import { Title } from './components/title/title.component'
+import { Home } from './pages/home/home.component'
+import { TeamManager } from './pages/team-manager/team-manager.component'
+import { Container } from './components/container/container.component'
+import { Paragraphy } from './components/paragraphy/paragraphy.component'
+import { Divisor } from './components/divisor/divisor.component'
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { Paragraphy } from './components/paragraphy/paragraphy.component';
     TeamManager,
     Container,
     Paragraphy,
+    Divisor,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

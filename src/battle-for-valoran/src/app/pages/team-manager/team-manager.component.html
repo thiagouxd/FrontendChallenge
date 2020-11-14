@@ -1,11 +1,30 @@
-<lol-container>
-  <lol-title size="medium">GERENCIAMENTO DOS TIMES</lol-title>
+<div class="team-manager">
+  <lol-button
+    type="no-background"
+    class="team-manager__button-return"
+    routerLink="/home"
+    size="medium"
+  >
+    Retornar para o início
+  </lol-button>
 
-  <lol-paragraphy size="large">
-    VOCÊ TERÁ QUE NOMEAR E SELECIONAR AS NAÇÕES PARA EXATAMENTE 8 TIMES.
-  </lol-paragraphy>
+  <lol-container>
+    <lol-title size="medium">GERENCIAMENTO DOS TIMES</lol-title>
 
-  <lol-paragraphy>
-    O "BATALHA POR VALORAN" SE INICIA NA FASE DE QUARTAS DE FINAL.
-  </lol-paragraphy>
-</lol-container>
+    <div class="team-manager__content">
+      <lol-paragraphy size="large">
+        VOCÊ TERÁ QUE NOMEAR E SELECIONAR AS NAÇÕES PARA EXATAMENTE 8 TIMES.
+      </lol-paragraphy>
+
+      <lol-paragraphy>
+        O "BATALHA POR VALORAN" SE INICIA NA FASE DE QUARTAS DE FINAL.
+      </lol-paragraphy>
+    </div>
+
+    <lol-divisor></lol-divisor>
+
+    <footer>
+      <lol-button text="Próxima etapa"></lol-button>
+    </footer>
+  </lol-container>
+</div>

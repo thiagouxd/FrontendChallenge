@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core'
 
 @Component({
   selector: 'lol-paragraphy',
@@ -6,9 +6,9 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./paragraphy.component.scss'],
 })
 export class Paragraphy implements OnInit {
-  @Input() size: string;
+  @Input() size: string
 
   ngOnInit() {
-    this.size = this.size ? `paragraphy_${this.size}` : '';
+    this.size = this.size ? `paragraphy_${this.size}` : ''
   }
 }

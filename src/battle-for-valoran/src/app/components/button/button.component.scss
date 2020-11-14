@@ -1,5 +1,5 @@
 .button {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   font-size: var(--medium);
   font-weight: var(--semibold);
@@ -12,6 +12,7 @@
   border-image-source: linear-gradient(180deg, #f2cb73, #9b7a2f);
   border-image-slice: 1;
   cursor: pointer;
+  text-decoration: none;
   outline: 0;
   &:hover,
   &:focus {
@@ -36,4 +37,9 @@
 .button_medium {
   padding: var(--small) var(--medium);
   border-width: 2px;
+}
+
+.button_no-background {
+  background: none;
+  border: 0;
 }

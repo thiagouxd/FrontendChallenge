@@ -1,5 +1,5 @@
-import { Component, AfterViewInit } from '@angular/core';
-import * as Feather from 'feather-icons';
+import { Component, AfterViewInit } from '@angular/core'
+import * as Feather from 'feather-icons'
 
 @Component({
   selector: 'app-root',
@@ -7,9 +7,9 @@ import * as Feather from 'feather-icons';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements AfterViewInit {
-  title = 'battle-for-valoran';
+  title = 'battle-for-valoran'
 
   ngAfterViewInit() {
-    Feather.replace();
+    Feather.replace()
   }
 }

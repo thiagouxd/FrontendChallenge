@@ -1,3 +1,9 @@
 .paragraphy {
   color: var(--light);
+  margin-bottom: var(--medium);
+  letter-spacing: 1px;
+}
+
+.paragraphy_large {
+  font-size: var(--large);
 }

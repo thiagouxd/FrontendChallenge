@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core'
 
 @Component({
   selector: 'lol-button',
@@ -6,12 +6,14 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./button.component.scss'],
 })
 export class Button implements OnInit {
-  @Input() size: string;
-  @Input() disabled: boolean = false;
-  @Input() callbackFunction: () => void;
-  @Input() routerLink: string;
+  @Input() size: string
+  @Input() text: string
+  @Input() disabled: boolean = false
+  @Input() type: string
+  @Input() callbackFunction: () => void
+  @Input() routerLink: string
 
   ngOnInit() {
-    this.size = this.size ? `button_${this.size}` : '';
+    this.size = this.size ? `button_${this.size}` : ''
   }
 }

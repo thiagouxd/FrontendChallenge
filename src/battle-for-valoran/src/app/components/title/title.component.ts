@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input } from '@angular/core'
 
 @Component({
   selector: 'lol-title',
@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./title.component.scss'],
 })
 export class Title {
-  @Input() size: boolean = true;
+  @Input() size: boolean = true
 }
