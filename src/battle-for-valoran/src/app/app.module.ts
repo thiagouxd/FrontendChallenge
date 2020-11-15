@@ -13,6 +13,7 @@ import { TeamManager } from './pages/team-manager/team-manager.component'
 import { TeamForm } from './components/team-form/team-form.component'
 import { Dialog } from './components/dialog/dialog.component'
 import { Region } from './components/region/region.component'
+import { Battle } from './pages/battle/battle.component'
 
 @NgModule({
   declarations: [
@@ -28,10 +29,10 @@ import { Region } from './components/region/region.component'
     TeamForm,
     Dialog,
     Region,
+    Battle,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
-  schemas: [NO_ERRORS_SCHEMA],
 })
 export class AppModule {}

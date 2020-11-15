@@ -16,7 +16,7 @@ export class Dialog implements OnInit {
   @Input() title: string
   @Input() subtitle: string
 
-  show(id: string) {
+  open(id: string) {
     lastElement = document.activeElement
     idOpened = id
     open = true

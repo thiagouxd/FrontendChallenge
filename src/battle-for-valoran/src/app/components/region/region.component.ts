@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit, Input } from '@angular/core'
 import { Dialog } from '../dialog/dialog.component'
 import { RegionsService } from './region.service'
 
@@ -9,6 +9,8 @@ import { RegionsService } from './region.service'
 })
 export class Region implements OnInit {
   constructor(private regionsService: RegionsService) {}
+
+  @Input() team: any
 
   regions: any
   regionSelected: any
@@ -22,7 +24,8 @@ export class Region implements OnInit {
     this.dialog.show('region')
   }
 
-  choose(region: any) {
-    console.log(region)
+  choose(team: any, region: any) {
+    team.region = region
+    console.log(team)
   }
 }

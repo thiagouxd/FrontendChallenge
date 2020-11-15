@@ -1,4 +1,5 @@
 <h3 class="title">Time 0{{ team.id }}</h3>
+
 <input
   type="text"
   class="input"
@@ -7,14 +8,13 @@
   required
   autocomplete="off"
 />
-<p *ngIf="!team.name" class="text-validate">É obrigatório inserir um nome {{ team.index }}</p>
+
+<p *ngIf="!team.name" class="text-validate">É obrigatório inserir um nome</p>
 
 <h3 class="title">Região:</h3>
 
-<lol-button text="Escolher ou alterar Região"></lol-button>
+<p *ngIf="!team.region.id" class="text-validate">É obrigatório escolher uma região</p>
 
-<p *ngIf="!team.region.length" class="text-validate">
-  É obrigatório escolher uma região {{ team.id }}
-</p>
+<lol-region [team]="team"></lol-region>
 
 <lol-divisor dark="true"></lol-divisor>

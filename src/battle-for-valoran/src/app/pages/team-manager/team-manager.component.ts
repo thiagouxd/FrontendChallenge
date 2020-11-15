@@ -2,6 +2,8 @@ import { Component, OnInit, Input } from '@angular/core'
 import { Title } from '@angular/platform-browser'
 import { Dialog } from 'src/app/components/dialog/dialog.component'
 import { TeamsService } from './team-manager.service'
+import { Router } from '@angular/router'
+import { Battle } from '../battle/battle.component'
 
 @Component({
   selector: 'lol-team-manager',
@@ -10,22 +12,21 @@ import { TeamsService } from './team-manager.service'
 })
 export class TeamManager implements OnInit {
   dialog: any = new Dialog()
-  constructor(private titleService: Title, private teamsService: TeamsService) {}
+  constructor(
+    private battle: Battle,
+    private titleService: Title,
+    private teamsService: TeamsService,
+  ) {}
 
   @Input() teams: any
   @Input() teamSelected: any
-
-  startBattle(): void {
-    localStorage.setItem('teams', JSON.stringify(this.teams))
-    console.log(this.teams)
-  }
 
   ngOnInit() {
     this.titleService.setTitle('Gerenciamento de times')
     this.teams = this.teamsService.getTeams()
   }
 
-  finish() {
-    alert(this.teamSelected)
+  startBattle(): void {
+    this.battle.startBattle(this.teams)
   }
 }
