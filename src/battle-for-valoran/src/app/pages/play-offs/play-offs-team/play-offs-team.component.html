@@ -1,0 +1,11 @@
+<button class="play-offs__team" (click)="winner($event, team)" [disabled]="!team">
+  <span class="play-offs__image-region">
+    <img *ngIf="team" [src]="team.region.image" />
+  </span>
+
+  <span class="play-offs__team-name">{{ team ? team.name : 'a definir' }}</span>
+
+  <span class="play-offs__icon">
+    <i data-feather="play"></i>
+  </span>
+</button>

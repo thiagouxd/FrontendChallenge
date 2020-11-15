@@ -1,0 +1,15 @@
+.play-offs {
+  display: flex;
+  align-items: center;
+}
+
+.play-offs__match {
+  margin-bottom: calc(var(--xx-large) * 2);
+  margin-right: var(--xx-large);
+}
+
+.play-offs__semi {
+  .play-offs__match:first-child {
+    margin-bottom: calc(var(--xx-large) * 6);
+  }
+}

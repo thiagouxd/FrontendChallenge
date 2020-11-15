@@ -10,7 +10,6 @@ export class TeamForm {
   constructor(private region: Region) {}
 
   @Input() team: any
-  @Input() callbackChooseRegion(): void {}
 
   changeNameTeam(team: any, event): void {
     team.name = event.target.value

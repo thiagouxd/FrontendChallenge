@@ -14,6 +14,7 @@ import { TeamForm } from './components/team-form/team-form.component'
 import { Dialog } from './components/dialog/dialog.component'
 import { Region } from './components/region/region.component'
 import { PlayOffs } from './pages/play-offs/play-offs.component'
+import { PlayOffsTeam } from './pages/play-offs/play-offs-team/play-offs-team.component'
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { PlayOffs } from './pages/play-offs/play-offs.component'
     Dialog,
     Region,
     PlayOffs,
+    PlayOffsTeam
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
