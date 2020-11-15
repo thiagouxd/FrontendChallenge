@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core'
 import { Title } from '@angular/platform-browser'
 import { Dialog } from 'src/app/components/dialog/dialog.component'
 import { TeamsService } from './team-manager.service'
-import { PlayOff } from '../play-off/play-off.component'
+import { PlayOffs } from '../play-offs/play-offs.component'
 
 @Component({
   selector: 'lol-team-manager',
@@ -12,7 +12,7 @@ import { PlayOff } from '../play-off/play-off.component'
 export class TeamManager implements OnInit {
   dialog: any = new Dialog()
   constructor(
-    private playOff: PlayOff,
+    private playOffs: PlayOffs,
     private titleService: Title,
     private teamsService: TeamsService,
   ) {}
@@ -26,7 +26,7 @@ export class TeamManager implements OnInit {
   }
 
   startBattle(): void {
-    this.playOff.startBattle(this.teams)
+    this.playOffs.startBattle(this.teams)
   }
 
   closeDialog() {

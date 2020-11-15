@@ -13,7 +13,7 @@ import { TeamManager } from './pages/team-manager/team-manager.component'
 import { TeamForm } from './components/team-form/team-form.component'
 import { Dialog } from './components/dialog/dialog.component'
 import { Region } from './components/region/region.component'
-import { PlayOff } from './pages/play-off/play-off.component'
+import { PlayOffs } from './pages/play-offs/play-offs.component'
 
 @NgModule({
   declarations: [
@@ -29,7 +29,7 @@ import { PlayOff } from './pages/play-off/play-off.component'
     TeamForm,
     Dialog,
     Region,
-    PlayOff,
+    PlayOffs,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
