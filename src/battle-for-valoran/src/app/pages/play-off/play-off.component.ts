@@ -6,18 +6,18 @@ let teamsBattle: any
   providedIn: 'root',
 })
 @Component({
-  selector: 'lol-battle',
-  templateUrl: './battle.component.html',
-  styleUrls: ['./battle.component.scss'],
+  selector: 'lol-play-off',
+  templateUrl: './play-off.component.html',
+  styleUrls: ['./play-off.component.scss'],
 })
-export class Battle {
+export class PlayOff {
   constructor(private router: Router) {}
   teams: any
 
   startBattle(teams: any) {
     teamsBattle = teams
     console.log(teamsBattle)
-    this.router.navigateByUrl('/battle')
+    this.router.navigateByUrl('/play-off')
   }
 
   verifyTeams() {

@@ -2,8 +2,7 @@ import { Component, OnInit, Input } from '@angular/core'
 import { Title } from '@angular/platform-browser'
 import { Dialog } from 'src/app/components/dialog/dialog.component'
 import { TeamsService } from './team-manager.service'
-import { Router } from '@angular/router'
-import { Battle } from '../battle/battle.component'
+import { PlayOff } from '../play-off/play-off.component'
 
 @Component({
   selector: 'lol-team-manager',
@@ -13,7 +12,7 @@ import { Battle } from '../battle/battle.component'
 export class TeamManager implements OnInit {
   dialog: any = new Dialog()
   constructor(
-    private battle: Battle,
+    private playOff: PlayOff,
     private titleService: Title,
     private teamsService: TeamsService,
   ) {}
@@ -27,6 +26,13 @@ export class TeamManager implements OnInit {
   }
 
   startBattle(): void {
-    this.battle.startBattle(this.teams)
+    this.playOff.startBattle(this.teams)
+  }
+
+  closeDialog() {
+    const regionSelected = document.querySelector('[name=radioRegion]:checked')
+    //@ts-ignore
+    regionSelected.checked = false
+    this.dialog.close()
   }
 }
