@@ -1,6 +1,6 @@
 <div class="regions">
   <label *ngFor="let region of regions" class="region">
-    <input [name]="'radioRegion' + team.id" type="radio" (change)="choose(team, region)" />
+    <input name="radioRegion" type="radio" (change)="choose(region)" />
     <img [src]="region.image" alt="" />
     {{ region.name }}
     <span class="region__container"></span>

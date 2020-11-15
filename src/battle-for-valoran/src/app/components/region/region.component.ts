@@ -1,7 +1,11 @@
-import { Component, OnInit, Input } from '@angular/core'
+import { Component, OnInit, Injectable } from '@angular/core'
 import { Dialog } from '../dialog/dialog.component'
 import { RegionsService } from './region.service'
 
+let teamBattle: any
+@Injectable({
+  providedIn: 'root',
+})
 @Component({
   selector: 'lol-region',
   templateUrl: './region.component.html',
@@ -9,8 +13,6 @@ import { RegionsService } from './region.service'
 })
 export class Region implements OnInit {
   constructor(private regionsService: RegionsService) {}
-
-  @Input() team: any
 
   regions: any
   regionSelected: any
@@ -21,11 +23,12 @@ export class Region implements OnInit {
   }
 
   openDialog(team: any) {
-    this.dialog.show('region')
+    teamBattle = team
+    document.querySelector('[name="radioRegion"]:checked')
+    this.dialog.open('region')
   }
 
-  choose(team: any, region: any) {
-    team.region = region
-    console.log(team)
+  choose(region: any) {
+    teamBattle.region = region
   }
 }

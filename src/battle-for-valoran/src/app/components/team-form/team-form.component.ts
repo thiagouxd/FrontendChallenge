@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core'
-import { Dialog } from '../dialog/dialog.component'
+import { Region } from '../region/region.component'
 
 @Component({
   selector: 'lol-team-form',
@@ -7,17 +7,17 @@ import { Dialog } from '../dialog/dialog.component'
   styleUrls: ['./team-form.component.scss'],
 })
 export class TeamForm {
+  constructor(private region: Region) {}
+
   @Input() team: any
   @Input() callbackChooseRegion(): void {}
-
-  dialog: any = new Dialog()
 
   changeNameTeam(team: any, event): void {
     team.name = event.target.value
   }
 
   chooseRegion(team) {
+    this.region.openDialog(team)
     const idDialog = `team${team.id}`
-    this.dialog.open(idDialog)
   }
 }

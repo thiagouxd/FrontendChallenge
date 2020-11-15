@@ -11,10 +11,10 @@
 
 <p *ngIf="!team.name" class="text-validate">É obrigatório inserir um nome</p>
 
-<h3 class="title">Região:</h3>
+<h3 class="title">Região: {{ team.region.name }}</h3>
+
+<lol-button (click)="chooseRegion(team)" text="Escolher ou alterar Região"></lol-button>
 
 <p *ngIf="!team.region.id" class="text-validate">É obrigatório escolher uma região</p>
-
-<lol-region [team]="team"></lol-region>
 
 <lol-divisor dark="true"></lol-divisor>
