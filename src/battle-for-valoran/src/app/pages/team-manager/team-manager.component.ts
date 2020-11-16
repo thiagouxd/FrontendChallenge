@@ -13,11 +13,11 @@ export class TeamManager implements OnInit {
   dialog: any = new Dialog()
 
   get nameTeamsComplete() {
-    return this.teams.some((team: any) => team.name)
+    return this.teams.some((team: any) => !team.name)
   }
 
   get regionTeamsComplete() {
-    return this.teams.some((team: any) => team.region.name)
+    return this.teams.some((team: any) => !team.region.image)
   }
 
   constructor(
@@ -34,7 +34,7 @@ export class TeamManager implements OnInit {
   }
 
   startBattle() {
-    this.nameTeamsComplete && this.regionTeamsComplete
+    !this.nameTeamsComplete && !this.regionTeamsComplete
       ? this.playOffs.startBattle(this.teams)
       : alert('Preencha todos os campos e escolha as regiões.')
   }
