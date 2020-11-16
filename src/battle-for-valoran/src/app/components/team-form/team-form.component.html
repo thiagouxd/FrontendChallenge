@@ -1,17 +1,18 @@
-<h3 class="title">Time 0{{ team.id }}</h3>
+<label [for]="'name' + team.id" class="label">Time 0{{ team.id }}</label>
 
 <input
   type="text"
   class="input"
   (change)="changeNameTeam(team, $event)"
-  name="name"
   required
+  [id]="'name' + team.id"
+  [name]="'name' + team.id"
   autocomplete="off"
 />
 
 <p *ngIf="!team.name" class="text-validate">É obrigatório inserir um nome</p>
 
-<h3 class="title">Região: {{ team.region.name }}</h3>
+<label class="label">Região: {{ team.region.name }}</label>
 
 <lol-button (click)="chooseRegion(team)" text="Escolher ou alterar Região"></lol-button>
 

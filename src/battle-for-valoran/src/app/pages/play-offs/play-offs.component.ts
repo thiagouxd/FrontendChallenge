@@ -27,6 +27,7 @@ export class PlayOffs implements OnInit {
 
   ngOnInit() {
     this.teams ? '' : this.router.navigateByUrl('/home')
+    document.body.classList.add('battle')
   }
 
   startBattle(teams: any) {

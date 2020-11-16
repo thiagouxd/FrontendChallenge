@@ -34,10 +34,9 @@ export class TeamManager implements OnInit {
   }
 
   startBattle() {
-    // this.nameTeamsComplete && this.regionTeamsComplete
-    this.nameTeamsComplete
+    this.nameTeamsComplete && this.regionTeamsComplete
       ? this.playOffs.startBattle(this.teams)
-      : alert('Preencha todos os campos e escolha todas as regiões.')
+      : alert('Preencha todos os campos e escolha as regiões.')
   }
 
   closeDialog() {
