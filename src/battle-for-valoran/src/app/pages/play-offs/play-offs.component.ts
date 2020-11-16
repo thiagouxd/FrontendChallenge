@@ -20,7 +20,7 @@ export class PlayOffs implements OnInit {
     second: {},
     third: {},
     fourth: {},
-    fiveth: {},
+    fifth: {},
     sixth: {},
     final: {},
   }

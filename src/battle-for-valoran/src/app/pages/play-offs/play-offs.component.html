@@ -48,11 +48,11 @@
   <div class="play-offs__semi">
     <div class="play-offs__match">
       <lol-play-offs-team
-        (callbackWinner)="winnerMatch(match.first, 'fiveth')"
+        (callbackWinner)="winnerMatch(match.first, 'fifth')"
         [team]="match.first"
       ></lol-play-offs-team>
       <lol-play-offs-team
-        (callbackWinner)="winnerMatch(match.second, 'fiveth')"
+        (callbackWinner)="winnerMatch(match.second, 'fifth')"
         [team]="match.second"
       ></lol-play-offs-team>
     </div>
@@ -71,8 +71,8 @@
 
   <div class="play-offs__match">
     <lol-play-offs-team
-      (callbackWinner)="winnerMatch(match.fiveth, 'final')"
-      [team]="match.fiveth"
+      (callbackWinner)="winnerMatch(match.fifth, 'final')"
+      [team]="match.fifth"
     ></lol-play-offs-team>
     <lol-play-offs-team
       (callbackWinner)="winnerMatch(match.sixth, 'final')"
