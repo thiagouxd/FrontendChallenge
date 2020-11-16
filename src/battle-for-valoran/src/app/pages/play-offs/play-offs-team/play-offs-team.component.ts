@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core'
+import { Component, EventEmitter, Input, Output } from '@angular/core'
 
 @Component({
   selector: 'lol-play-offs-team',
@@ -7,17 +7,16 @@ import { Component, Input } from '@angular/core'
 })
 export class PlayOffsTeam {
   @Input() team: any
-  @Input() callbackWinner(team: any): void {}
+  @Output() callbackWinner: EventEmitter<any> = new EventEmitter()
 
   winner(event: any, team: any) {
     const buttonTeams = event.target.parentElement.parentElement.querySelectorAll(
       'lol-play-offs-team',
     )
-    console.log(buttonTeams)
 
+    this.callbackWinner.emit([team])
     buttonTeams.forEach((button: any) => {
       button.querySelector('button').disabled = true
     })
-    this.callbackWinner(team)
   }
 }

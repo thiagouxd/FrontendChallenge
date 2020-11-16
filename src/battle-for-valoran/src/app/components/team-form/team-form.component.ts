@@ -11,12 +11,11 @@ export class TeamForm {
 
   @Input() team: any
 
-  changeNameTeam(team: any, event): void {
+  changeNameTeam(team: any, event: any): void {
     team.name = event.target.value
   }
 
-  chooseRegion(team) {
+  chooseRegion(team: any) {
     this.region.openDialog(team)
-    const idDialog = `team${team.id}`
   }
 }

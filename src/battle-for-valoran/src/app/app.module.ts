@@ -15,6 +15,7 @@ import { Dialog } from './components/dialog/dialog.component'
 import { Region } from './components/region/region.component'
 import { PlayOffs } from './pages/play-offs/play-offs.component'
 import { PlayOffsTeam } from './pages/play-offs/play-offs-team/play-offs-team.component'
+import { Champion } from './pages/champion/champion.component'
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { PlayOffsTeam } from './pages/play-offs/play-offs-team/play-offs-team.co
     Dialog,
     Region,
     PlayOffs,
-    PlayOffsTeam
+    PlayOffsTeam,
+    Champion,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

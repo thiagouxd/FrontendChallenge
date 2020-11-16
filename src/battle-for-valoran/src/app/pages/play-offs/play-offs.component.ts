@@ -1,9 +1,9 @@
 import { Component, Injectable, OnInit } from '@angular/core'
 import { Router } from '@angular/router'
+import { Champion } from '../champion/champion.component'
 
 let teamsLastEight: any
-let teamsSemiFinal: any = []
-let teamsFinal: any
+
 @Injectable({
   providedIn: 'root',
 })
@@ -13,9 +13,17 @@ let teamsFinal: any
   styleUrls: ['./play-offs.component.scss'],
 })
 export class PlayOffs implements OnInit {
-  constructor(private router: Router) {}
+  constructor(private router: Router, private champion: Champion) {}
   teams: any = teamsLastEight
-  teamsSemiFinal: any = []
+  match: any = {
+    first: {},
+    second: {},
+    third: {},
+    fourth: {},
+    fiveth: {},
+    sixth: {},
+    final: {},
+  }
 
   ngOnInit() {
     this.teams ? '' : this.router.navigateByUrl('/home')
@@ -26,9 +34,12 @@ export class PlayOffs implements OnInit {
     this.router.navigateByUrl('/play-offs')
   }
 
-  winnerLastEight(team: any) {
-    teamsSemiFinal.push(team)
-    this.teamsSemiFinal = teamsSemiFinal
+  winnerMatch(team: any, match: string) {
+    match !== 'final' ? (this.match[match] = team) : this.goToChampion(team)
+  }
+
+  goToChampion(champion: any) {
+    this.champion.show(champion)
   }
 
   shuffleTeams(array: any) {

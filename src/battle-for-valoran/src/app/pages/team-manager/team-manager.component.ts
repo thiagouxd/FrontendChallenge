@@ -13,11 +13,11 @@ export class TeamManager implements OnInit {
   dialog: any = new Dialog()
 
   get nameTeamsComplete() {
-    return this.teams.some((team) => team.name)
+    return this.teams.some((team: any) => team.name)
   }
 
   get regionTeamsComplete() {
-    return this.teams.some((team) => team.region.name)
+    return this.teams.some((team: any) => team.region.name)
   }
 
   constructor(
@@ -27,7 +27,6 @@ export class TeamManager implements OnInit {
   ) {}
 
   @Input() teams: any
-  @Input() teamSelected: any
 
   ngOnInit() {
     this.titleService.setTitle('Gerenciamento de times')
@@ -35,7 +34,7 @@ export class TeamManager implements OnInit {
   }
 
   startBattle() {
-    // this.nameTeamsComplete() && this.regionTeamsComplete()
+    // this.nameTeamsComplete && this.regionTeamsComplete
     this.nameTeamsComplete
       ? this.playOffs.startBattle(this.teams)
       : alert('Preencha todos os campos e escolha todas as regiões.')
@@ -44,7 +43,7 @@ export class TeamManager implements OnInit {
   closeDialog() {
     const regionSelected = document.querySelector('[name=radioRegion]:checked')
     //@ts-ignore
-    regionSelected.checked = false
+    regionSelected ? (regionSelected.checked = false) : ''
     this.dialog.close()
   }
 }

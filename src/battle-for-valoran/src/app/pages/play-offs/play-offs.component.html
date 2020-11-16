@@ -1,41 +1,82 @@
 <div class="play-offs">
   <div class="play-offs__conference-semi">
     <div class="play-offs__match">
-      <lol-play-offs-team [callbackWinner]="winnerLastEight" [team]="teams[0]"></lol-play-offs-team>
-      <lol-play-offs-team [callbackWinner]="winnerLastEight" [team]="teams[1]"></lol-play-offs-team>
+      <lol-play-offs-team
+        (callbackWinner)="winnerMatch(teams[0], 'first')"
+        [team]="teams[0]"
+      ></lol-play-offs-team>
+      <lol-play-offs-team
+        (callbackWinner)="winnerMatch(teams[1], 'first')"
+        [team]="teams[1]"
+      ></lol-play-offs-team>
     </div>
 
     <div class="play-offs__match">
-      <lol-play-offs-team [callbackWinner]="winnerLastEight" [team]="teams[2]"></lol-play-offs-team>
-      <lol-play-offs-team [callbackWinner]="winnerLastEight" [team]="teams[3]"></lol-play-offs-team>
+      <lol-play-offs-team
+        (callbackWinner)="winnerMatch(teams[2], 'second')"
+        [team]="teams[2]"
+      ></lol-play-offs-team>
+      <lol-play-offs-team
+        (callbackWinner)="winnerMatch(teams[3], 'second')"
+        [team]="teams[3]"
+      ></lol-play-offs-team>
     </div>
 
     <div class="play-offs__match">
-      <lol-play-offs-team [callbackWinner]="winnerLastEight" [team]="teams[4]"></lol-play-offs-team>
-      <lol-play-offs-team [callbackWinner]="winnerLastEight" [team]="teams[5]"></lol-play-offs-team>
+      <lol-play-offs-team
+        (callbackWinner)="winnerMatch(teams[4], 'third')"
+        [team]="teams[4]"
+      ></lol-play-offs-team>
+      <lol-play-offs-team
+        (callbackWinner)="winnerMatch(teams[5], 'third')"
+        [team]="teams[5]"
+      ></lol-play-offs-team>
     </div>
 
     <div class="play-offs__match">
-      <lol-play-offs-team [callbackWinner]="winnerLastEight" [team]="teams[6]"></lol-play-offs-team>
-      <lol-play-offs-team [callbackWinner]="winnerLastEight" [team]="teams[7]"></lol-play-offs-team>
+      <lol-play-offs-team
+        (callbackWinner)="winnerMatch(teams[6], 'fourth')"
+        [team]="teams[6]"
+      ></lol-play-offs-team>
+      <lol-play-offs-team
+        (callbackWinner)="winnerMatch(teams[7], 'fourth')"
+        [team]="teams[7]"
+      ></lol-play-offs-team>
     </div>
   </div>
 
   <div class="play-offs__semi">
-    {{ teamsSemiFinal }}
     <div class="play-offs__match">
-      <lol-play-offs-team [team]="teamsSemiFinal[0]"></lol-play-offs-team>
-      <lol-play-offs-team [team]="teamsSemiFinal[1]"></lol-play-offs-team>
+      <lol-play-offs-team
+        (callbackWinner)="winnerMatch(match.first, 'fiveth')"
+        [team]="match.first"
+      ></lol-play-offs-team>
+      <lol-play-offs-team
+        (callbackWinner)="winnerMatch(match.second, 'fiveth')"
+        [team]="match.second"
+      ></lol-play-offs-team>
     </div>
 
     <div class="play-offs__match">
-      <lol-play-offs-team [team]="teamsSemiFinal[2]"></lol-play-offs-team>
-      <lol-play-offs-team [team]="teamsSemiFinal[3]"></lol-play-offs-team>
+      <lol-play-offs-team
+        (callbackWinner)="winnerMatch(match.third, 'sixth')"
+        [team]="match.third"
+      ></lol-play-offs-team>
+      <lol-play-offs-team
+        (callbackWinner)="winnerMatch(match.fourth, 'sixth')"
+        [team]="match.fourth"
+      ></lol-play-offs-team>
     </div>
   </div>
 
-  <!-- <div class="play-offs__match">
-    <lol-play-offs-team></lol-play-offs-team>
-    <lol-play-offs-team></lol-play-offs-team>
-  </div> -->
+  <div class="play-offs__match">
+    <lol-play-offs-team
+      (callbackWinner)="winnerMatch(match.fiveth, 'final')"
+      [team]="match.fiveth"
+    ></lol-play-offs-team>
+    <lol-play-offs-team
+      (callbackWinner)="winnerMatch(match.sixth, 'final')"
+      [team]="match.sixth"
+    ></lol-play-offs-team>
+  </div>
 </div>
