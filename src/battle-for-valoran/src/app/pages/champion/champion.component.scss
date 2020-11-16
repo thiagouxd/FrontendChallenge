@@ -1,0 +1,36 @@
+.champion {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: var(--light);
+  background-image: url('/assets/bg-battle.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-y: auto;
+}
+
+.champion__title {
+  margin: var(--xx-large) 0 var(--medium) 0;
+  font-size: 80px;
+  font-weight: var(--regular);
+}
+
+.champion__image {
+  height: 240px;
+  margin: 0 auto;
+}
+
+.champion__description {
+  font-size: var(--large);
+  max-width: 480px;
+  margin: 0 auto;
+  margin-bottom: var(--xx-large);
+}
+
+.champion__content {
+  max-width: 1080px;
+  margin: 80px auto;
+}

@@ -1,10 +1,13 @@
-<lol-title>Valoran Battle</lol-title>
+<section class="champion">
+  <div class="champion__content">
+    <lol-title>Valoran Battle</lol-title>
+    <h3 class="champion__title">Região Campeã</h3>
+    <img class="champion__image" [src]="teamChampion.region.image" />
+    <h3 class="champion__title">{{ teamChampion.name }}</h3>
+    <p class="champion__description">Agora, essa região controla todos que vivem em Valoran</p>
 
-<h3 class="title">Região Campeã</h3>
-<img [src]="teamChampion.region.image" />
-<h3 class="title">{{ teamChampion.name }}</h3>
-<p class="description">Agora, essa região controla todos que vivem em Valoran</p>
-
-<footer>
-  <lol-button routerLink="/home">Iniciar um novo torneio</lol-button>
-</footer>
+    <footer>
+      <lol-button routerLink="/home" size="large">Iniciar um novo torneio</lol-button>
+    </footer>
+  </div>
+</section>
