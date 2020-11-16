@@ -18,6 +18,5 @@ export class Champion {
   show(team: any) {
     this.router.navigateByUrl('/champion')
     teamChampion = team
-    console.log(this.teamChampion)
   }
 }
